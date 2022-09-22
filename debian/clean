@@ -1,0 +1,7 @@
+dist-transpiled/
+dist/
+polyfills/constants.js
+polyfills/process-es6.js
+polyfills/buffer-es6.js
+polyfills/browserify-fs.js
+polyfills/crypto-browserify.js

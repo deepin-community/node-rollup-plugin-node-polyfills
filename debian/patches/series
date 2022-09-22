@@ -1,0 +1,3 @@
+drop-legacy-plugins.patch
+disable-rollup-plugin-license.patch
+add-system-path.patch

@@ -1,0 +1,13 @@
+Not packaged
+
+--- a/scripts/build-polyfills.js
++++ b/scripts/build-polyfills.js
+@@ -3,7 +3,7 @@
+ const nodeResolve = require('@rollup/plugin-node-resolve').nodeResolve;
+ const commonjs = require('@rollup/plugin-commonjs');
+ const json = require('@rollup/plugin-json');
+-const license = require('rollup-plugin-license');
++//const license = require('rollup-plugin-license');
+ 
+ async function main() {
+   await Promise.all([

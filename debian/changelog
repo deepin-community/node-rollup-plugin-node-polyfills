@@ -1,0 +1,56 @@
+node-rollup-plugin-node-polyfills (0.2.1+dfsg-6) unstable; urgency=medium
+
+  * Team upload
+  * Update standards version to 4.6.0, no changes needed.
+  * Fix filenamemangle
+  * Fix debian/watch (probably never worked...)
+  * Drop nodejs dependency
+  * Update lintian overrides
+
+ -- Yadd <yadd@debian.org>  Tue, 26 Oct 2021 22:56:45 +0200
+
+node-rollup-plugin-node-polyfills (0.2.1+dfsg-5) unstable; urgency=medium
+
+  * Drop legacy rollup-plugin-json usage
+
+ -- Pirate Praveen <praveen@debian.org>  Mon, 04 Jan 2021 00:59:08 +0530
+
+node-rollup-plugin-node-polyfills (0.2.1+dfsg-4) unstable; urgency=medium
+
+  * Replace options deprecated in node-rollup-plugin-node-resolve 11
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 02 Jan 2021 21:31:38 +0530
+
+node-rollup-plugin-node-polyfills (0.2.1+dfsg-3) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Submit.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata (already
+    present in machine-readable debian/copyright).
+
+  [ Pirate Praveen ]
+  * Drop legacy node-resolve and commonjs plugins usage
+  * Bump Standards-Version to 4.5.1 (no changes needed)
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 30 Dec 2020 15:22:41 +0530
+
+node-rollup-plugin-node-polyfills (0.2.1+dfsg-2) unstable; urgency=medium
+
+  * Team upload
+
+  [ Pirate Praveen ]
+  * Tighten build dependencies
+
+  [ Xavier Guimard ]
+  * Bump debhelper compatibility level to 13
+  * Add "Rules-Requires-Root: no"
+  * Use dh-sequence-nodejs
+  * Update lintian overrides
+
+ -- Xavier Guimard <yadd@debian.org>  Fri, 23 Oct 2020 08:13:36 +0200
+
+node-rollup-plugin-node-polyfills (0.2.1+dfsg-1) unstable; urgency=medium
+
+  * Initial release (Closes: #971091)
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 27 Sep 2020 23:32:53 +0530

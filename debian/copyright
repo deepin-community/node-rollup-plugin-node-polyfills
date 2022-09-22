@@ -1,0 +1,193 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: rollup-plugin-node-polyfills
+Upstream-Contact: https://github.com/ionic-team/rollup-plugin-node-polyfills/issues
+Source: https://github.com/ionic-team/rollup-plugin-node-polyfills#readme
+Files-Excluded:
+ polyfills/constants.js
+ polyfills/process-es6.js
+ polyfills/buffer-es6.js
+ polyfills/browserify-fs.js
+ polyfills/crypto-browserify.js
+ polyfills/LICENSE*
+
+Files: *
+Copyright: 2019 these people
+License: Expat
+
+Files: debian/*
+Copyright: 2020, Pirate Praveen <praveen@debian.org>
+License: Expat
+
+Files: debian/build_modules/abstract-leveldown/*
+ debian/build_modules/deferred-leveldown/*
+Copyright: 2013-present Rod Vagg and Contributors
+License: Expat
+
+Files: debian/build_modules/browserify-fs/*
+ debian/build_modules/fwd-stream/*
+ debian/build_modules/level-blobs/*
+ debian/build_modules/level-filesystem/*
+ debian/build_modules/octal/*
+Copyright: 2014-2015 Mathias Buus (mafintosh)
+License: Expat
+
+Files: debian/build_modules/buffer-es6/*
+Copyright: Feross Aboukhadijeh, and other contributors
+License: Expat
+
+Files: debian/build_modules/buffer-es6/ieee754.js
+Copyright: 2008, Fair Oaks Labs, Inc.
+           Brian White
+License: BSD-3-clause
+
+Files: debian/build_modules/level-errors/*
+ debian/build_modules/level-iterator-stream/*
+ debian/build_modules/levelup/*
+Copyright: 2012-present Contributors
+License: Expat
+
+Files: debian/build_modules/level-js/*
+Copyright: 2012-present Max Ogden (https://github.com/maxogden) and Contributors
+License: Expat
+
+Files: debian/build_modules/level-peek/*
+ debian/build_modules/level-post/*
+ debian/build_modules/level-sublevel/*
+ debian/build_modules/looper/*
+ debian/build_modules/ltgt/*
+ debian/build_modules/pull-cat/*
+ debian/build_modules/pull-level/*
+ debian/build_modules/pull-live/*
+ debian/build_modules/pull-pushable/*
+ debian/build_modules/pull-stream/*
+ debian/build_modules/pull-window/*
+ debian/build_modules/stream-to-pull-stream/*
+Copyright: 2013-2016 Dominic Tarr
+License: Expat
+
+Files: debian/build_modules/level-supports/*
+Copyright: 2019-present Contributors
+License: Expat
+
+Files: debian/build_modules/process-es6/*
+Copyright: 2013 Roman Shtylman <shtylman@gmail.com>
+License: Expat
+
+Files: debian/build_modules/safer-buffer/*
+Copyright: 2018 Nikita Skovoroda <chalkerx@gmail.com>
+License: Expat
+
+Files: debian/build_modules/fwd-stream/node_modules/readable-stream/*
+Copyright: Isaac Z. Schlueter ("Author")
+License: BSD-2-clause
+
+Files: debian/build_modules/fwd-stream/node_modules/readable-stream/lib/*
+ debian/build_modules/pull-level/lib/*
+Copyright: Joyent, Inc. and other Node contributors
+License: Expat
+
+Files: debian/build_modules/level-sublevel/node_modules/levelup/*
+Copyright: 2014 LevelUP contributors
+License: Expat
+
+Files: polyfills/assert.js
+Copyright: 2009 Thomas Robinson <280north.com>
+License: Expat
+
+Files: polyfills/domain.js
+Copyright: 2013+ Bevry Pty Ltd (http://bevry.me)
+License: Expat
+
+Files: polyfills/http.js
+ polyfills/http-lib/*
+Copyright: 2015 John Hiesey
+License: Expat
+
+Files: polyfills/os.js
+Copyright: 2016 CoderPuppy
+License: Expat
+
+Files: polyfills/setimmediate.js
+Copyright: 2012 Barnesandnoble.com, llc, Donavon West, and Domenic Denicola
+License: Expat
+
+Files: polyfills/url.js
+ polyfills/path.js
+ polyfills/util.js
+ polyfills/qs.js
+ polyfills/string-decoder.js
+ polyfills/zlib.js
+Copyright: Joyent, Inc. and other Node contributors
+License: Expat
+
+Files: polyfills/zlib-lib/*
+Copyright: 2014-2016 by Vitaly Puzrin
+License: Expat
+
+License: Expat
+ Permission is hereby granted, free of charge, to any person
+ obtaining a copy of this software and associated documentation files
+ (the "Software"), to deal in the Software without restriction,
+ including without limitation the rights to use, copy, modify, merge,
+ publish, distribute, sublicense, and/or sell copies of the Software,
+ and to permit persons to whom the Software is furnished to do so,
+ subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be
+ included in all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+ BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+ ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+License: BSD-2-clause
+ Redistribution and use in source and binary forms, with or without modification,
+ are permitted provided that the following conditions are met:
+ .
+  * Redistributions of source code must retain the above copyright notice, this
+    list of conditions and the following disclaimer.
+ .
+  * Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: BSD-3-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ 3. Neither the name of the University nor the names of its contributors
+    may be used to endorse or promote products derived from this software
+    without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE HOLDERS OR
+ CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+ LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

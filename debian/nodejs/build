@@ -1,0 +1,4 @@
+tsc -p .
+rollup -c
+node scripts/build-constants.js
+node scripts/build-polyfills.js
