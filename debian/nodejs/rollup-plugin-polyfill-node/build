@@ -1,0 +1,7 @@
+node scripts/build-constants.js
+node scripts/build-polyfills.js
+node scripts/collect-polyfills.js
+tsc -p .
+rollup -c
+rollup lib/index.js -f cjs -o dist/index.js
+rollup lib/index.js -f es -o dist/es/index.js

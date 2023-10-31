@@ -1,5 +1,5 @@
-Not packaged
-
+Description: Disable rollup plugin license
+ Not packaged
 --- a/scripts/build-polyfills.js
 +++ b/scripts/build-polyfills.js
 @@ -3,7 +3,7 @@

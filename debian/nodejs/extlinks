@@ -1,1 +1,10 @@
+concat-stream
+core-util-is
+crypto-browserify
+errno
+immediate
+inherits
+isarray
+@rollup/plugin-inject
 @types/node
+xtend

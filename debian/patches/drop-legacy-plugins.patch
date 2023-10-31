@@ -1,3 +1,4 @@
+Description: Drop legacy plugins
 --- a/scripts/build-polyfills.js
 +++ b/scripts/build-polyfills.js
 @@ -1,8 +1,8 @@

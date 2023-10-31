@@ -2,13 +2,18 @@ Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: rollup-plugin-node-polyfills
 Upstream-Contact: https://github.com/ionic-team/rollup-plugin-node-polyfills/issues
 Source: https://github.com/ionic-team/rollup-plugin-node-polyfills#readme
-Files-Excluded:
+ https://github.com/FredKSchott/rollup-plugin-polyfill-node/tags
+Files-Excluded: 
  polyfills/constants.js
  polyfills/process-es6.js
  polyfills/buffer-es6.js
  polyfills/browserify-fs.js
  polyfills/crypto-browserify.js
  polyfills/LICENSE*
+Files-Excluded-rollup-plugin-polyfill-node:
+ polyfills/buffer-es6.js
+ polyfills/constants.js
+ src/polyfills.ts
 
 Files: *
 Copyright: 2019 these people
@@ -40,6 +45,14 @@ Copyright: 2008, Fair Oaks Labs, Inc.
            Brian White
 License: BSD-3-clause
 
+Files: debian/build_modules/fwd-stream/node_modules/readable-stream/*
+Copyright: Isaac Z. Schlueter ("Author")
+License: BSD-2-clause
+
+Files: debian/build_modules/fwd-stream/node_modules/readable-stream/lib/*
+Copyright: Joyent, Inc. and other Node contributors
+License: Expat
+
 Files: debian/build_modules/level-errors/*
  debian/build_modules/level-iterator-stream/*
  debian/build_modules/levelup/*
@@ -65,6 +78,10 @@ Files: debian/build_modules/level-peek/*
 Copyright: 2013-2016 Dominic Tarr
 License: Expat
 
+Files: debian/build_modules/level-sublevel/node_modules/levelup/*
+Copyright: 2014 LevelUP contributors
+License: Expat
+
 Files: debian/build_modules/level-supports/*
 Copyright: 2019-present Contributors
 License: Expat
@@ -75,19 +92,6 @@ License: Expat
 
 Files: debian/build_modules/safer-buffer/*
 Copyright: 2018 Nikita Skovoroda <chalkerx@gmail.com>
-License: Expat
-
-Files: debian/build_modules/fwd-stream/node_modules/readable-stream/*
-Copyright: Isaac Z. Schlueter ("Author")
-License: BSD-2-clause
-
-Files: debian/build_modules/fwd-stream/node_modules/readable-stream/lib/*
- debian/build_modules/pull-level/lib/*
-Copyright: Joyent, Inc. and other Node contributors
-License: Expat
-
-Files: debian/build_modules/level-sublevel/node_modules/levelup/*
-Copyright: 2014 LevelUP contributors
 License: Expat
 
 Files: polyfills/assert.js
@@ -124,26 +128,66 @@ Files: polyfills/zlib-lib/*
 Copyright: 2014-2016 by Vitaly Puzrin
 License: Expat
 
+Files: rollup-plugin-polyfill-node/*
+Copyright: 2020 Fred K. Schott
 License: Expat
- Permission is hereby granted, free of charge, to any person
- obtaining a copy of this software and associated documentation files
- (the "Software"), to deal in the Software without restriction,
- including without limitation the rights to use, copy, modify, merge,
- publish, distribute, sublicense, and/or sell copies of the Software,
- and to permit persons to whom the Software is furnished to do so,
- subject to the following conditions:
- .
- The above copyright notice and this permission notice shall be
- included in all copies or substantial portions of the Software.
- .
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
- NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
- BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
- ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
- CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- SOFTWARE.
+
+Files: rollup-plugin-polyfill-node/polyfills/*buffer-es6*
+Copyright: Feross Aboukhadijeh, and other contributors
+ 2008 Fair Oaks Labs, Inc.
+License: Expat
+Comment: Part of this file originally covered by
+ Copyright (c) 2008, Fair Oaks Labs, Inc under BSD-3-Clause
+
+Files: rollup-plugin-polyfill-node/polyfills/*process-es6*
+Copyright: 2013 Roman Shtylman <shtylman@gmail.com>
+License: Expat
+
+Files: rollup-plugin-polyfill-node/polyfills/__http-lib/to-arraybuffer.js
+Copyright: 2016 John Hiesey
+License: Expat
+
+Files: rollup-plugin-polyfill-node/polyfills/__zlib-lib/*
+Copyright: 2014-2016 Vitaly Puzrin
+License: Expat
+
+Files: rollup-plugin-polyfill-node/polyfills/assert.js
+Copyright: 2020 Fred K. Schott
+ 2009 Thomas Robinson <280north.com>
+License: Expat
+Comment: based on node assert, original copyright: 2009 Thomas Robinson <280north.com>
+
+Files: rollup-plugin-polyfill-node/polyfills/domain.js
+Copyright: 2013+ Bevry Pty Ltd <https://bevry.me>
+License: Expat
+
+Files: rollup-plugin-polyfill-node/polyfills/http.js
+Copyright: 2015 John Hiesey
+License: Expat
+
+Files: rollup-plugin-polyfill-node/polyfills/os.js
+Copyright: 2016 CoderPuppy
+License: Expat
+
+Files: rollup-plugin-polyfill-node/polyfills/path.js
+ rollup-plugin-polyfill-node/polyfills/querystring.js
+ rollup-plugin-polyfill-node/polyfills/string-decoder.js
+ rollup-plugin-polyfill-node/polyfills/url.js
+ rollup-plugin-polyfill-node/polyfills/util.js
+ rollup-plugin-polyfill-node/polyfills/zlib.js
+Copyright: Joyent, Inc. and other Node contributors
+License: Expat
+
+Files: rollup-plugin-polyfill-node/polyfills/setimmediate.js
+Copyright: 2012 Barnesandnoble.com
+ 2012 llc
+ 2012 Donavon West
+ 2012 Domenic Denicola
+License: Expat
+
+Files: rollup-plugin-polyfill-node/polyfills/vm.js
+Copyright: Unknown
+License: Expat
 
 License: BSD-2-clause
  Redistribution and use in source and binary forms, with or without modification,
@@ -191,3 +235,24 @@ License: BSD-3-clause
  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: Expat
+ Permission is hereby granted, free of charge, to any person
+ obtaining a copy of this software and associated documentation files
+ (the "Software"), to deal in the Software without restriction,
+ including without limitation the rights to use, copy, modify, merge,
+ publish, distribute, sublicense, and/or sell copies of the Software,
+ and to permit persons to whom the Software is furnished to do so,
+ subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be
+ included in all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+ BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+ ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.

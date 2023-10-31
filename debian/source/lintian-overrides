@@ -1,14 +1,14 @@
 # false positive
-package-does-not-install-examples debian/build_modules/level-sublevel/examples/
-package-does-not-install-examples test/examples/
+package-does-not-install-examples *debian/build_modules/level-sublevel/examples/*
+package-does-not-install-examples *test/examples/*
 
 # False positive
-source-is-missing debian/build_modules/pull-level/lib/internal/streams/buffer_list.js
-source-is-missing debian/build_modules/pull-level/lib/internal/streams/from.js
-source-contains-prebuilt-javascript-object debian/build_modules/pull-level/lib/internal/streams/buffer_list.js
-source-contains-prebuilt-javascript-object debian/build_modules/pull-level/lib/internal/streams/from.js
-very-long-line-length-in-source-file debian/build_modules/level-sublevel/node_modules/levelup/README.md line 199 is 675 characters long (>512)
-very-long-line-length-in-source-file debian/build_modules/levelup/README.md line 39 is 534 characters long (>512)
-very-long-line-length-in-source-file debian/build_modules/levelup/UPGRADING.md line 7 is 543 characters long (>512)
-very-long-line-length-in-source-file debian/build_modules/pull-level/lib/internal/streams/buffer_list.js line 5 is 534 characters long (>512)
-very-long-line-length-in-source-file debian/build_modules/pull-level/lib/internal/streams/from.js line 9 is 534 characters long (>512)
+source-is-missing *debian/build_modules/pull-level/lib/internal/streams/buffer_list.js*
+source-is-missing *debian/build_modules/pull-level/lib/internal/streams/from.js*
+source-contains-prebuilt-javascript-object *debian/build_modules/pull-level/lib/internal/streams/buffer_list.js*
+source-contains-prebuilt-javascript-object *debian/build_modules/pull-level/lib/internal/streams/from.js*
+very-long-line-length-in-source-file *debian/build_modules/level-sublevel/node_modules/levelup/README.md*
+very-long-line-length-in-source-file *debian/build_modules/levelup/README.md*
+very-long-line-length-in-source-file *debian/build_modules/levelup/UPGRADING.md*
+very-long-line-length-in-source-file *debian/build_modules/pull-level/lib/internal/streams/buffer_list.js*
+very-long-line-length-in-source-file *debian/build_modules/pull-level/lib/internal/streams/from.js*
