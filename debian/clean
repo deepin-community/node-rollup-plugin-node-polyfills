@@ -5,3 +5,8 @@ polyfills/process-es6.js
 polyfills/buffer-es6.js
 polyfills/browserify-fs.js
 polyfills/crypto-browserify.js
+rollup-plugin-polyfill-node/dist/
+rollup-plugin-polyfill-node/lib/
+rollup-plugin-polyfill-node/polyfills/buffer-es6.js
+rollup-plugin-polyfill-node/polyfills/constants.js
+rollup-plugin-polyfill-node/src/polyfills.ts

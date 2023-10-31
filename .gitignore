@@ -1,1 +1,3 @@
-.pc/
+dist
+dist-transpiled
+node_modules

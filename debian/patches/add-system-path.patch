@@ -1,8 +1,8 @@
-Resolve system modules
-
+Description: Add system path
+ Resolve system modules
 --- a/scripts/build-polyfills.js
 +++ b/scripts/build-polyfills.js
-@@ -18,11 +18,12 @@
+@@ -18,11 +18,11 @@
    const bundle = await rollup.rollup({
      input: depName,
      plugins: [
@@ -10,9 +10,7 @@ Resolve system modules
 -      nodeResolve({
 +        nodeResolve({
          browser: true,
--        preferBuiltins: true
-+        preferBuiltins: true,
-+        moduleDirectories: ['node_modules','/usr/share/nodejs','/usr/lib/nodejs']
+         preferBuiltins: true
        }),
 +      commonjs(),
        // license({

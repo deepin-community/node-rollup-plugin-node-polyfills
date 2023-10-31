@@ -1,0 +1,47 @@
+Description: fix for rollup 3
+Author: Yadd <yadd@debian.org>
+Bug-Debian: https://bugs.debian.org/1022651
+Forwarded: not-needed
+Last-Update: 2022-11-02
+
+--- a/rollup-plugin-polyfill-node/package.json
++++ b/rollup-plugin-polyfill-node/package.json
+@@ -2,7 +2,7 @@
+   "name": "rollup-plugin-polyfill-node",
+   "version": "0.11.0",
+   "main": "dist/index.js",
+-  "module": "dist/es/index.js",
++  "module": "dist/es/index.mjs",
+   "types": "dist/index.d.ts",
+   "scripts": {
+     "pretest": "npm run build",
+--- a/rollup-plugin-polyfill-node/rollup.config.mjs
++++ b/rollup-plugin-polyfill-node/rollup.config.mjs
+@@ -8,6 +8,7 @@
+ 	],
+ 	output: ['es','cjs'].map((format) => ({
+ 		dir: `dist/${format==='es' ? 'es' : ''}`,
++		entryFileNames: `index.${format==='es' ? 'mjs' : 'js'}`,
+ 		exports: 'auto',
+ 		format,
+ 		generatedCode: {
+--- a/rollup-plugin-polyfill-node/test/index.js
++++ b/rollup-plugin-polyfill-node/test/index.js
+@@ -67,7 +67,7 @@
+     }).then(function() {
+       done(new Error ('should not get here'))
+     }, function (err) {
+-      if (err.message === `"diffieHellman" is not exported by "\u0000polyfill-node.crypto.js", imported by "test/examples/crypto-broken.js".`) {
++      if (err.message.match(/diffieHellman.* is not exported by .*polyfill-node.crypto.js.* imported by /)) {
+         done();
+         return;
+       }
+--- a/rollup.config.js
++++ b/rollup.config.js
+@@ -1,5 +1,5 @@
+ 
+-export default {
++module.exports = {
+ 	input: 'dist-transpiled/index.js',
+ 	external: [
+ 		'path',

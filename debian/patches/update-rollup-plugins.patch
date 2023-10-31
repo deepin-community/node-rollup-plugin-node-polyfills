@@ -1,0 +1,20 @@
+Description: update rolup plugins
+Author: Yadd <yadd@debian.org>
+Forwarded: no
+Last-Update: 2022-11-02
+
+--- a/rollup-plugin-polyfill-node/scripts/build-polyfills.js
++++ b/rollup-plugin-polyfill-node/scripts/build-polyfills.js
+@@ -1,9 +1,9 @@
+ const rollup = require('rollup');
+ // const fs = require('fs');
+ const path = require('path');
+-const nodeResolve = require('rollup-plugin-node-resolve');
+-const commonjs = require('rollup-plugin-commonjs');
+-const json = require('rollup-plugin-json');
++const {nodeResolve} = require('@rollup/plugin-node-resolve');
++const commonjs = require('@rollup/plugin-commonjs');
++const json = require('@rollup/plugin-json');
+ 
+ async function main() {
+   await Promise.all([

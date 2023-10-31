@@ -76,7 +76,7 @@ function createBuffer (that, length) {
   if (Buffer.TYPED_ARRAY_SUPPORT) {
     // Return an augmented `Uint8Array` instance, for best performance
     that = new Uint8Array(length)
-    that.__proto__ = Buffer.prototype
+    Object.setPrototypeOf(that, Buffer.prototype)
   } else {
     // Fallback: Return an object instance of the Buffer class
     if (that === null) {
@@ -119,7 +119,7 @@ Buffer.poolSize = 8192 // not used by this implementation
 
 // TODO: Legacy, not needed anymore. Remove in next major version.
 Buffer._augment = function (arr) {
-  arr.__proto__ = Buffer.prototype
+  Object.setPrototypeOf(arr, Buffer.prototype)
   return arr
 }
 
@@ -152,8 +152,8 @@ Buffer.from = function (value, encodingOrOffset, length) {
 }
 
 if (Buffer.TYPED_ARRAY_SUPPORT) {
-  Buffer.prototype.__proto__ = Uint8Array.prototype
-  Buffer.__proto__ = Uint8Array
+  Object.setPrototypeOf(Buffer.prototype, Uint8Array.prototype)
+  Object.setPrototypeOf(Buffer, Uint8Array)
   if (typeof Symbol !== 'undefined' && Symbol.species &&
       Buffer[Symbol.species] === Buffer) {
     // Fix subarray() in ES2016. See: https://github.com/feross/buffer/pull/97
@@ -275,7 +275,7 @@ function fromArrayBuffer (that, array, byteOffset, length) {
   if (Buffer.TYPED_ARRAY_SUPPORT) {
     // Return an augmented `Uint8Array` instance, for best performance
     that = array
-    that.__proto__ = Buffer.prototype
+    Object.setPrototypeOf(that, Buffer.prototype)
   } else {
     // Fallback: Return an object instance of the Buffer class
     that = fromArrayLike(that, array)
@@ -1080,7 +1080,7 @@ Buffer.prototype.slice = function slice (start, end) {
   var newBuf
   if (Buffer.TYPED_ARRAY_SUPPORT) {
     newBuf = this.subarray(start, end)
-    newBuf.__proto__ = Buffer.prototype
+    Object.setPrototypeOf(newBuf, Buffer.prototype)
   } else {
     var sliceLen = end - start
     newBuf = new Buffer(sliceLen, undefined)
